@@ -65,9 +65,16 @@ body .body-div, body header {
   width: 100%;
 }
 
+body {
+  background-color: green;
+  background-image: url(../../img/back-img.jpeg);
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-position: left;
+}
 body header {
   max-width: 70%;
-  height: 150px;
+  height: 170px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -84,37 +91,40 @@ body header .header-logo .logo-img {
   height: 100%;
 }
 body header .flag-box {
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  padding: 5px;
 }
 body header .flag-box .geo-conture {
   max-width: 250px;
   max-height: 100%;
 }
 body header .language-box {
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: start;
 }
 body header .language-box a .language-flag {
-  max-width: 40px;
-  max-height: 40px;
+  max-width: 20px;
+  max-height: 20px;
+  margin-top: 10px;
 }
 body .body-div {
   max-width: 70%;
   height: 100%;
   display: flex;
-  background-color: grey;
 }
 body .body-div .menu-box {
   width: 20%;
   height: 100%;
   padding-top: 50px;
-  padding-left: 4%;
-  background-color: red;
+  padding-left: 3%;
+  background-color: #dddde1;
 }
 body .body-div .menu-box ul {
   height: 200px;
@@ -125,4 +135,9 @@ body .body-div .menu-box ul {
 }
 body .body-div .menu-box ul li .menu-click {
   font-family: "Muli regular";
+}
+body .body-div .info-box {
+  width: 80%;
+  height: 100%;
+  background-color: white;
 }
