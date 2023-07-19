@@ -1,13 +1,12 @@
 body {
     @extend %body;
-    background-color: green;
     background-image: url(../../img/back-img.jpeg);
     background-repeat: repeat;
     background-attachment: fixed;
     background-position: left; 
     header {
         @extend %width;
-        max-width: 70%;
+        max-width: 80%;
         height: 170px;
         display: flex;
         align-items: center;
@@ -16,7 +15,7 @@ body {
         padding-right: 1%;
         position: sticky;
         top: 0px;
-        background-color: lightblue;
+        background-color: #dddde1;
         .header-logo {            
             .logo-img {
                 max-width: 45px;
@@ -55,30 +54,32 @@ body {
     }
     .body-div {
         @extend %width;
-        max-width: 70%;
+        max-width: 80%;
         height: 100%;
         display: flex;
         .menu-box {
-            width: 20%;
+            width: 15%;
             height: 100%;
             padding-top: 50px;
-            padding-left: 3%;
+            padding-left: 1%;
             background-color:#dddde1;
-            ul {    
+            .menu-ul {    
                 height: 200px;            
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
                 justify-content: space-around;
-                li{
-                    .menu-click {
-                        font-family: $m-reg;
+                li {
+                    font-family: $hp-reg;
+                    .active {
+                        font-weight: bold;
+                        color: darkblue;
                     }
                 }
             }
         }
         .info-box {
-            width: 80%;
+            width: 85%;
             height: 100%;
             background-color:white;
         }
