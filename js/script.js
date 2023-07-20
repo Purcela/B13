@@ -7,3 +7,4 @@ $("#burger-menu1").on("click", function(){
 $("#gallery-menu").on("click", function(){
   $("#menu2").toggleClass("open-menu");
 })
+

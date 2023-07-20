@@ -8,7 +8,7 @@ function buildStyles() {
 }
 
 function watch() {
-  gulp.watch('scss/style.scss', gulp.series('buildStyles'));
+  gulp.watch('scss/style.scss', buildStyles);
 }
 
 gulp.task('buildStyles', buildStyles);
