@@ -32,7 +32,7 @@ body {
             align-items: center;
             justify-content: space-between;
             padding: 5px;
-            background-image: url(../../img/georgia.jpg);            
+            background-image: url(../../img/georgia.png);            
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center; 
@@ -85,7 +85,7 @@ body {
                 height: 250px;            
                 display: flex;
                 flex-direction: column;
-                align-items: center;
+                align-items: flex-start;
                 justify-content: space-between;
                 li {
                     font-family: $hp-reg;
@@ -116,7 +116,7 @@ body {
                 margin-right: 5%;
                 margin-top: 20px;
             }
-        }
+        }          
     }    
     .footer-box {
         @extend %width;
