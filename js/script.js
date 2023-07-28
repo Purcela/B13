@@ -16,3 +16,25 @@ function myFunction(imgs) {
   imgText.innerHTML = imgs.alt;
   expandImg.parentElement.style.display = "block";
 }
+
+
+
+
+//-------------------------- TEST -------------------------------------
+
+const thumbnails = document.querySelectorAll('.thumbnails img');
+const fullSizeDiv = document.querySelector('.full-size');
+const fullSizeImg = fullSizeDiv.querySelector('img');
+
+thumbnails.forEach(thumbnail => {
+  thumbnail.addEventListener('click', () => {
+    fullSizeImg.src = thumbnail.src;
+    fullSizeDiv.classList.add('open');
+  });
+});
+
+fullSizeDiv.addEventListener('click', () => {
+  fullSizeDiv.classList.remove('open');
+});
+
+//----------------------------------------------------------------------
