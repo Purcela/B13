@@ -22,19 +22,23 @@ function myFunction(imgs) {
 
 //-------------------------- TEST -------------------------------------
 
-const thumbnails = document.querySelectorAll('.thumbnails img');
-const fullSizeDiv = document.querySelector('.full-size');
-const fullSizeImg = fullSizeDiv.querySelector('img');
+const galleryImages = document.querySelectorAll('.gallery-img');
+const fullImgContainer = document.querySelector('.full-img');
 
-thumbnails.forEach(thumbnail => {
-  thumbnail.addEventListener('click', () => {
-    fullSizeImg.src = thumbnail.src;
-    fullSizeDiv.classList.add('open');
+// Add click event listeners to each thumbnail image
+galleryImages.forEach((img) => {
+  img.addEventListener('click', () => {
+    // Create a new image element for the full-size image
+    const fullImg = document.createElement('img');
+    fullImg.src = img.src; // Set the source of the full-size image to the clicked thumbnail image
+    fullImg.alt = img.alt; // Set the alt text of the full-size image to the alt text of the thumbnail image
+
+    // Clear any previous content in the full-img container
+    fullImgContainer.innerHTML = '';
+
+    // Append the full-size image to the full-img container
+    fullImgContainer.appendChild(fullImg);
   });
-});
-
-fullSizeDiv.addEventListener('click', () => {
-  fullSizeDiv.classList.remove('open');
 });
 
 //----------------------------------------------------------------------
