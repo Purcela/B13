@@ -20,19 +20,1653 @@
     <script src="https://kit.fontawesome.com/160820775c.js" crossorigin="anonymous"></script>
    
     <link rel="stylesheet" type="text/css" href="test-style.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
     <title>B13</title>
 </head>
 <body>
   <div class="editing-box">
-    <div class="gallery-box">
-      <img class="gallery-img t-shirt-img" src="img/t-shirts/t-hirt-1.jpg" alt="t-shirt">
-      <img class="gallery-img t-shirt-img" src="img/t-shirts/t-hirt-2.jpg" alt="t-shirt">
-      <img class="gallery-img t-shirt-img" src="img/t-shirts/t-hirt-3.jpg" alt="t-shirt">
-      <!-- Add more images as needed -->
-    </div>
-    <div class="resize-box">
-      <!-- The clicked image will be displayed here with full size -->
-    </div>
+    <div class="super-wrap" id="super-wrap">
+          <div class="super-doodle-bg">
+              <div class="super-doodle" id="super-doodle" style="opacity: 0.05;"></div>
+          </div>
+          <div class="super-maika active" id="super-maika" type="maika" gender="boy" direction="front" color="white" style="background-image: url(&quot;/res/app/imgs/maikebi/boy/front/white.png?1&quot;);">
+              <div class="container" id="maika-maker-controls" style="">
+                  <div class="maika-maker-left">
+      
+                      <ul class="nav nav-tabs" role="tablist" id="maika-maker-tabs">
+                          <li class="active"><a href="#maika-maker-tabs-color" id="tab-maika-maker-tabs-color" role="tab" data-toggle="tab">ფერი</a></li>
+                          <li><a href="#maika-maker-tabs-text" id="tab-maika-maker-tabs-text" role="tab" data-toggle="tab">ტექსტი</a></li>
+                          <li><a href="#maika-maker-tabs-upload" id="tab-maika-maker-tabs-upload" role="tab" data-toggle="tab">ატვირთე</a></li>
+                          <li><a href="#maika-maker-tabs-pattern" id="tab-maika-maker-tabs-pattern" role="tab" data-toggle="tab">შაბლონები</a></li>
+                      </ul>
+      
+                      <div class="tab-content">
+                          <div class="tab-pane" id="maika-maker-tabs-upload">
+                              <div class="maika-text">
+                                  ატვირთული ფაილი უნდა იყოს მაღალი  ხარისხის და რეზოლუციის (300dpi)  JPG, PNG, GIF, SVG                        </div>
+                              <div id="maika-maker-files-inputs" style="display: none"></div>
+                              <a href="javascript:" id="maika-maker-files" class="btn maika-upload pull-center">
+                                  ფაილის ატვირთვა                        </a>
+      
+                              <div class="clearfix maika-uploaded-images" id="maika-uploaded-images">
+                                                          </div>
+                          </div>
+                          <div class="tab-pane active" id="maika-maker-tabs-color">
+      
+                              <div class="clearfix maika-colors" type="cap" style="display: none;">
+                                                                  <a href="javascript:" color="cap-black">
+                                          <img style="width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/cap/cap-black.png?v3" alt="">
+                                      </a>
+                                                                  <a href="javascript:" color="cap-blue">
+                                          <img style="width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/cap/cap-blue.png?v3" alt="">
+                                      </a>
+                                                                  <a href="javascript:" color="cap-dark-blue">
+                                          <img style="width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/cap/cap-dark-blue.png?v3" alt="">
+                                      </a>
+                                                                  <a href="javascript:" color="cap-green">
+                                          <img style="width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/cap/cap-green.png?v3" alt="">
+                                      </a>
+                                                                  <a href="javascript:" color="cap-red">
+                                          <img style="width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/cap/cap-red.png?v3" alt="">
+                                      </a>
+                                                                  <a href="javascript:" color="cap-white">
+                                          <img style="width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/cap/cap-white.png?v3" alt="">
+                                      </a>
+                                                          </div>
+                                                                                          <div class="clearfix maika-colors" type="maika" gender="boy" direction="front" style="display: block;">
+                                                                                  <a href="javascript:" color="black">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/black.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="navy">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/navy.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="royal_blue">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/royal_blue.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="blue">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/blue.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="green">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/green.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="light-green">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/light-green.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="orange">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/orange.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="yellow">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/yellow.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="bordeaux">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/bordeaux.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="red">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/red.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="purple">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/purple.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="pink">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/pink.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="grey">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/grey.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="beige">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/beige.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="white" class="active">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/white.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-beige">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/long-sleeve-beige.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-black">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/long-sleeve-black.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-blue">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/long-sleeve-blue.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-bordeaux">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/long-sleeve-bordeaux.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-dark-blue">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/long-sleeve-dark-blue.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-green">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/long-sleeve-green.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-grey">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/long-sleeve-grey.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-light-green">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/long-sleeve-light-green.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-orange">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/long-sleeve-orange.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-pink">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/long-sleeve-pink.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-purple">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/long-sleeve-purple.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-red">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/long-sleeve-red.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-royal_blue">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/long-sleeve-royal_blue.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-white">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/long-sleeve-white.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-yellow">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/long-sleeve-yellow.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="black-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/black-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="blue-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/blue-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="bordeaux-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/bordeaux-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="dark-blue-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/dark-blue-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="gray-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/gray-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="green-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/green-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="light-green-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/light-green-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="pink-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/pink-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="purple-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/purple-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="red-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/red-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="white-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/white-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="yellow-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/yellow-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="black-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/black-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="blue-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/blue-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="bordeaux-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/bordeaux-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="gray-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/gray-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="green-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/green-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="orange-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/orange-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="purple-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/purple-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="red-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/red-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="royal-blue-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/royal-blue-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="white-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/white-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="yellow-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/yellow-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="no-hoddie-black">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/no-hoddie-black.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="no-hoddie-blue">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/no-hoddie-blue.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="no-hoddie-dark-blue">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/no-hoddie-dark-blue.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="no-hoddie-grey">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/no-hoddie-grey.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="no-hoddie-red">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/no-hoddie-red.png?v3" alt="">
+                                              </a>
+                                                                          </div>
+                                                                  <div class="clearfix maika-colors" type="maika" gender="girl" direction="front" style="display: none;">
+                                                                                  <a href="javascript:" color="black">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/black.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="navy">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/navy.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="royal_blue">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/royal_blue.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="blue">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/blue.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="green">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/green.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="light-green">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/light-green.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="orange">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/orange.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="yellow">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/yellow.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="bordeaux">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/bordeaux.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="red">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/red.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="purple">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/purple.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="pink">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/pink.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="grey">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/grey.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="beige">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/beige.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="white" class="active">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/white.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-beige">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/long-sleeve-beige.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-black">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/long-sleeve-black.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-blue">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/long-sleeve-blue.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-bordeaux">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/long-sleeve-bordeaux.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-dark-blue">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/long-sleeve-dark-blue.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-green">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/long-sleeve-green.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-grey">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/long-sleeve-grey.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-light-green">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/long-sleeve-light-green.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-orange">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/long-sleeve-orange.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-pink">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/long-sleeve-pink.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-purple">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/long-sleeve-purple.png?v3" alt="">
+                                              </a>
+                                                                                  
+                                                                                  <a href="javascript:" color="long-sleeve-royal_blue">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/long-sleeve-royal_blue.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-white">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/long-sleeve-white.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-yellow">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/long-sleeve-yellow.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="black-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/black-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="blue-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/blue-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="bordeaux-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/bordeaux-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="dark-blue-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/dark-blue-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="gray-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/gray-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="green-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/green-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="light-green-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/light-green-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="pink-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/pink-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="purple-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/purple-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="red-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/red-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="white-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/white-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="yellow-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/yellow-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="black-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/black-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="blue-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/blue-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="bordeaux-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/bordeaux-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="gray-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/gray-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="green-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/green-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="orange-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/orange-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="purple-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/purple-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="red-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/red-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="royal-blue-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/royal-blue-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="white-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/white-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="yellow-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/yellow-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                          </div>
+                                                                                              <div class="clearfix maika-colors" type="polo" gender="boy" direction="front" style="display: none;">
+                                                                                  <a href="javascript:" color="black-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/black-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="blue-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/blue-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="bordeaux-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/bordeaux-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="dark-blue-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/dark-blue-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="gray-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/gray-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="green-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/green-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="light-green-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/light-green-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="pink-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/pink-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="purple-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/purple-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="red-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/red-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="white-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/white-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="yellow-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/yellow-polo.png?v3" alt="">
+                                              </a>
+                                                                          </div>
+                                                                  <div class="clearfix maika-colors" type="polo" gender="girl" direction="front" style="display: none;">
+                                                                                  <a href="javascript:" color="black-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/black-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="blue-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/blue-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="bordeaux-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/bordeaux-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="dark-blue-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/dark-blue-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="gray-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/gray-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="green-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/green-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="light-green-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/light-green-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="pink-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/pink-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="purple-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/purple-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="red-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/red-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="white-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/white-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="yellow-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/yellow-polo.png?v3" alt="">
+                                              </a>
+                                                                          </div>
+                                                              <div class="clearfix maika-colors" type="bode" direction="front" style="display: none;">
+                                                                          <a href="javascript:" color="white" class="active">
+                                              <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/baby/front/white.png?v3" alt="">
+                                          </a>
+                                                                  </div>
+                                  <div class="clearfix maika-colors" type="chanta" direction="front" style="display: none;">
+                                      <a href="javascript:" color="black">
+                                          <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/chanta.png?v3" alt="">
+                                      </a>
+                                  </div>
+                                                                  <div class="clearfix maika-colors" type="hood" gender="boy" direction="front" style="display: none;">
+                                                                                  <a href="javascript:" color="black-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/black-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="blue-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/blue-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="bordeaux-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/bordeaux-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="gray-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/gray-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="green-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/green-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="orange-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/orange-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="purple-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/purple-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="red-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/red-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="royal-blue-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/royal-blue-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="white-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/white-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="yellow-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/front/yellow-hoodie.png?v3" alt="">
+                                              </a>
+                                                                          </div>
+                                                                  <div class="clearfix maika-colors" type="hood" gender="girl" direction="front" style="display: none;">
+                                                                                  <a href="javascript:" color="black-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/black-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="blue-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/blue-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="bordeaux-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/bordeaux-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="gray-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/gray-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="green-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/green-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="orange-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/orange-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="purple-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/purple-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="red-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/red-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="royal-blue-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/royal-blue-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="white-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/white-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="yellow-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/front/yellow-hoodie.png?v3" alt="">
+                                              </a>
+                                                                          </div>
+                                                                                                                      <div class="clearfix maika-colors" type="maika" gender="boy" direction="back" style="display: none;">
+                                                                                  <a href="javascript:" color="black">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/black.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="navy">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/navy.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="royal_blue">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/royal_blue.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="blue">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/blue.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="green">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/green.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="light-green">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/light-green.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="orange">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/orange.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="yellow">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/yellow.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="bordeaux">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/bordeaux.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="red">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/red.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="purple">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/purple.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="pink">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/pink.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="grey">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/grey.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="beige">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/beige.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="white" class="active">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/white.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-beige">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/long-sleeve-beige.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-black">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/long-sleeve-black.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-blue">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/long-sleeve-blue.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-bordeaux">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/long-sleeve-bordeaux.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-dark-blue">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/long-sleeve-dark-blue.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-green">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/long-sleeve-green.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-grey">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/long-sleeve-grey.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-light-green">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/long-sleeve-light-green.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-orange">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/long-sleeve-orange.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-pink">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/long-sleeve-pink.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-purple">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/long-sleeve-purple.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-red">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/long-sleeve-red.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-royal_blue">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/long-sleeve-royal_blue.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-white">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/long-sleeve-white.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-yellow">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/long-sleeve-yellow.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="black-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/black-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="blue-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/blue-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="bordeaux-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/bordeaux-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="dark-blue-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/dark-blue-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="gray-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/gray-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="green-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/green-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="light-green-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/light-green-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="pink-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/pink-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="purple-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/purple-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="red-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/red-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="white-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/white-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="yellow-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/yellow-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="black-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/black-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="blue-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/blue-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="bordeaux-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/bordeaux-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="gray-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/gray-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="green-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/green-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="orange-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/orange-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="purple-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/purple-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="red-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/red-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="royal-blue-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/royal-blue-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="white-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/white-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="yellow-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/yellow-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="no-hoddie-black">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/no-hoddie-black.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="no-hoddie-blue">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/no-hoddie-blue.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="no-hoddie-dark-blue">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/no-hoddie-dark-blue.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="no-hoddie-grey">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/no-hoddie-grey.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="no-hoddie-red">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/no-hoddie-red.png?v3" alt="">
+                                              </a>
+                                                                          </div>
+                                                                  <div class="clearfix maika-colors" type="maika" gender="girl" direction="back" style="display: none;">
+                                                                                  <a href="javascript:" color="black">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/black.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="navy">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/navy.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="royal_blue">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/royal_blue.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="blue">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/blue.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="green">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/green.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="light-green">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/light-green.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="orange">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/orange.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="yellow">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/yellow.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="bordeaux">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/bordeaux.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="red">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/red.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="purple">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/purple.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="pink">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/pink.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="grey">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/grey.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="beige">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/beige.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="white" class="active">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/white.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-beige">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/long-sleeve-beige.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-black">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/long-sleeve-black.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-blue">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/long-sleeve-blue.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-bordeaux">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/long-sleeve-bordeaux.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-dark-blue">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/long-sleeve-dark-blue.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-green">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/long-sleeve-green.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-grey">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/long-sleeve-grey.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-light-green">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/long-sleeve-light-green.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-orange">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/long-sleeve-orange.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-pink">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/long-sleeve-pink.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-purple">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/long-sleeve-purple.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-red">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/long-sleeve-red.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-royal_blue">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/long-sleeve-royal_blue.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-white">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/long-sleeve-white.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="long-sleeve-yellow">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/long-sleeve-yellow.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="black-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/black-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="blue-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/blue-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="bordeaux-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/bordeaux-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="dark-blue-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/dark-blue-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="gray-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/gray-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="green-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/green-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="light-green-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/light-green-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="pink-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/pink-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="purple-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/purple-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="red-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/red-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="white-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/white-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="yellow-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/yellow-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="black-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/black-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="blue-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/blue-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="bordeaux-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/bordeaux-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="gray-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/gray-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="green-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/green-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="orange-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/orange-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="purple-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/purple-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="red-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/red-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="royal-blue-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/royal-blue-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="white-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/white-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="yellow-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/yellow-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                          </div>
+                                                                                              <div class="clearfix maika-colors" type="polo" gender="boy" direction="back" style="display: none;">
+                                                                                  <a href="javascript:" color="black-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/black-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="blue-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/blue-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="bordeaux-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/bordeaux-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="dark-blue-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/dark-blue-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="gray-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/gray-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="green-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/green-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="light-green-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/light-green-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="pink-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/pink-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="purple-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/purple-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="red-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/red-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="white-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/white-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="yellow-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/yellow-polo.png?v3" alt="">
+                                              </a>
+                                                                          </div>
+                                                                  <div class="clearfix maika-colors" type="polo" gender="girl" direction="back" style="display: none;">
+                                                                                  <a href="javascript:" color="black-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/black-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="blue-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/blue-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="bordeaux-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/bordeaux-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="dark-blue-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/dark-blue-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="gray-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/gray-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="green-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/green-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="light-green-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/light-green-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="pink-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/pink-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="purple-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/purple-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="red-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/red-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="white-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/white-polo.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="yellow-polo">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/yellow-polo.png?v3" alt="">
+                                              </a>
+                                                                          </div>
+                                                              <div class="clearfix maika-colors" type="bode" direction="back" style="display: none;">
+                                                                          <a href="javascript:" color="white" class="active">
+                                              <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/baby/back/white.png?v3" alt="">
+                                          </a>
+                                                                  </div>
+                                  <div class="clearfix maika-colors" type="chanta" direction="back" style="display: none;">
+                                      <a href="javascript:" color="black">
+                                          <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/chanta.png?v3" alt="">
+                                      </a>
+                                  </div>
+                                                                  <div class="clearfix maika-colors" type="hood" gender="boy" direction="back" style="display: none;">
+                                                                                  <a href="javascript:" color="black-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/black-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="blue-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/blue-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="bordeaux-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/bordeaux-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="gray-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/gray-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="green-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/green-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="orange-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/orange-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="purple-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/purple-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="red-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/red-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="royal-blue-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/royal-blue-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="white-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/white-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="yellow-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/boy/back/yellow-hoodie.png?v3" alt="">
+                                              </a>
+                                                                          </div>
+                                                                  <div class="clearfix maika-colors" type="hood" gender="girl" direction="back" style="display: none;">
+                                                                                  <a href="javascript:" color="black-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/black-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="blue-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/blue-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="bordeaux-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/bordeaux-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="gray-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/gray-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="green-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/green-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="orange-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/orange-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="purple-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/purple-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="red-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/red-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="royal-blue-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/royal-blue-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="white-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/white-hoodie.png?v3" alt="">
+                                              </a>
+                                                                                  <a href="javascript:" color="yellow-hoodie">
+                                                  <img style="height: 85px; width: 70px;" src="https://www.maika.ge/res/app/imgs/maikebi/girl/back/yellow-hoodie.png?v3" alt="">
+                                              </a>
+                                                                          </div>
+                                                                              </div>
+                          <div class="tab-pane" id="maika-maker-tabs-text">
+                              <div class="maika-text-selected" id="maika-text-selected">
+                                  <label for="maika-textarea" class="maika-text-small">ჩაწერე ტექსტი</label>
+                                  <textarea id="maika-textarea" class="maika-textarea"></textarea>
+      
+                                  <div class="maika-text-small">ტექსტის ფერი</div>
+      
+                                  <div class="clearfix select-color-wrap" id="maika-text-color" data-toggle="buttons">
+                                      <label class="btn select-color active" title="შავი" style="background-color: black">
+                                          <input type="radio" checked="checkbox" name="maika-text-color" value="black">
+                                      </label>
+                                      <label class="btn select-color" title="ლურჯი" style="background-color: blue">
+                                          <input type="radio" name="maika-text-color" value="blue">
+                                      </label>
+                                      <label class="btn select-color" title="მწვანე" style="background-color: green">
+                                          <input type="radio" name="maika-text-color" value="green">
+                                      </label>
+                                      <label class="btn select-color" title="ნაცრისფერი" style="background-color: grey">
+                                          <input type="radio" name="maika-text-color" value="grey">
+                                      </label>
+                                      <label class="btn select-color" title="სტაფილოსფერი" style="background-color: orange">
+                                          <input type="radio" name="maika-text-color" value="orange">
+                                      </label>
+                                      <label class="btn select-color" title="წითელი" style="background-color: red">
+                                          <input type="radio" name="maika-text-color" value="red">
+                                      </label>
+                                      <label class="btn select-color" title="თეთრი" style="background-color: white">
+                                          <input type="radio" name="maika-text-color" value="white">
+                                      </label>
+                                      <label class="btn select-color" title="ყვითელი" style="background-color: yellow">
+                                          <input type="radio" name="maika-text-color" value="yellow">
+                                      </label>
+                                  </div>
+      
+                                  <label for="maika-font" class="maika-text-small">აირჩიე ფონტი</label>
+                                  <select id="maika-font" class="maika-select maika-font-select">
+                                      <option value="CollegiateHeavyOutline" selected="selected">CollegiateHeavyOutline</option>
+                                      <option value="Chiller">Chiller</option>
+                                      <option value="Comic Sans MS">Comic Sans MS</option>
+                                      <option value="Cooper Black">Cooper Black</option>
+                                      <option value="Eka">Eka</option>
+                                      <option value="EkaHor">EkaHor</option>
+                                      <!-- <option value="Emilio 20">Emilio 20</option> -->
+                                      <option value="Sanet">Sanet</option>
+                                      <option value="Snap ITC">Snap ITC</option>
+                                      <option value="Stencil">Stencil</option>
+                                      <option value="Times New Roman">Times New Roman</option>
+                                      <option value="Viner Hand ITC">Viner Hand ITC</option>
+                                      <option value="Waltograph">Waltograph</option>
+                                      <option value="Zaza">Zaza</option>
+                                      <option value="Zaza SP">Zaza SP</option>
+                                      <option value="BPG Nateli AsoMtavruli">BPG Nateli AsoMtavruli</option>
+                                      <option value="BPG Nateli Nusxuri">BPG Nateli Nusxuri</option>
+                                  </select>
+      
+                                  <div class="clearfix maika-split">
+                                      <div class="pull-left maika-split-left" id="maika-text-alignament" data-toggle="buttons">
+                                          <div class="maika-text-small">გასწორება</div>
+                                          <label class="btn maika-style-checkbox">
+                                              <input type="radio" name="alignament" value="left">
+                                              <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+                                          </label>
+                                          <label class="btn maika-style-checkbox active">
+                                              <input type="radio" name="alignament" value="center" checked="">
+                                              <span class="glyphicon glyphicon-align-center" aria-hidden="true"></span>
+                                          </label>
+                                          <label class="btn maika-style-checkbox">
+                                              <input type="radio" name="alignament" value="right">
+                                              <span class="glyphicon glyphicon-align-right" aria-hidden="true"></span>
+                                          </label>
+                                      </div>
+      
+                                      <div class="pull-left maika-split-right" data-toggle="buttons">
+                                          <div class="maika-text-small">სტილი</div>
+                                          <label class="btn maika-style-checkbox">
+                                              <input type="checkbox" name="b" id="maika-text-bold">
+                                              <b>B</b>
+                                          </label>
+                                          <label class="btn maika-style-checkbox">
+                                              <input type="checkbox" name="i" id="maika-text-italic">
+                                              <i>I</i>
+                                          </label>
+                                          <label class="btn maika-style-checkbox">
+                                              <input type="checkbox" name="u" id="maika-text-underline">
+                                              <u>U</u>
+                                          </label>
+                                      </div>
+                                  </div>
+                              </div>
+      
+                              <div class="maika-add-text" id="maika-add-text" style="display: none">
+                                  <div class="maika-text" id="maika-add-text-instruction">შექმენით ახალი ტექსტი ან აირჩიეთ არსებული მაიკაზე რომ გაუკეთოთ რედაქტირება</div>
+                                  <div class="clearfix maika-btns">
+                                      <a href="javascript:" class="btn maika-btn-add-text" id="maika-btn-add-text">ტექსტის დამატება</a>
+                                  </div>
+                              </div>
+      
+                          </div>
+                          <div class="tab-pane" id="maika-maker-tabs-pattern">
+                                                      <div class="clearfix maika-patterns" id="maika-patterns" isolate-scrolling="">
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/0/372.png">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/0/373.png">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/0/374.png">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/0/375.png">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/0/376.png">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/0/378.png">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/0/379.png">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/0/380.png">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/0/381.png">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/0/382.png">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/0/383.png">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/0/384.png">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/0/385.png">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/0/386.png">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/0/387.png">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/0/388.png">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/0/389.png">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/0/390.png">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1781.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1782.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1783.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1784.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1785.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1786.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1787.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1788.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1789.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1790.png">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1791.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1792.png">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1793.png">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1794.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1795.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1796.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1797.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1798.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1799.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1800.png">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1801.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1802.png">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1803.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1804.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1805.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1806.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1807.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1808.png">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1809.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1811.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1812.jpeg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1813.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1814.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1815.png">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1816.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1817.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1818.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1819.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1821.jpeg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1822.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1823.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1824.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1825.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1826.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1827.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1828.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1829.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1830.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1831.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1832.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1833.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1834.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1835.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1836.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1837.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1838.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1839.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1840.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1841.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1842.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1843.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1844.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1845.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1846.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1847.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1848.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1849.png">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1850.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1851.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1852.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1853.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1854.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1855.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1856.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1857.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1858.png">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1859.png">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1860.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1861.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1862.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1863.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1864.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1865.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1866.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1867.jpg">
+                                      </a>
+                                                                  <a href="javascript:">
+                                          <img src="https://www.maika.ge/uploads/photo/original/1/1868.jpg">
+                                      </a>
+                                                          </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="maika-maker-right">
+                      <div class="clearfix maika-input-group pull-center" id="maika-type" data-toggle="buttons">
+                          <label class="btn maika-radio-btn maika-maika active">
+                              <input type="radio" name="type" value="maika" checked="">
+                              მაისური                    </label>
+                          <label class="btn maika-radio-btn maika-polo">
+                              <input type="radio" name="type" value="polo">
+                              polo                    </label>
+                                              <label class="btn maika-radio-btn maika-chanta">
+                              <input type="radio" name="type" value="chanta">
+                              ჩანთა                    </label>
+                          <label class="btn maika-radio-btn maika-hood">
+                              <input type="radio" name="type" value="hood">
+                              ჰუდი                    </label>
+                          <label class="btn maika-radio-btn maika-cap">
+                              <input type="radio" name="type" value="cap">
+                              cap                    </label>
+                      </div>
+                      <div class="clearfix maika-input-group pull-center" id="maika-direction" data-toggle="buttons">
+                          <label class="btn maika-radio-btn maika-front active">
+                              <input type="radio" name="direction" value="front" checked="">
+                              წინა                    </label>
+                          <label class="btn maika-radio-btn maika-back" style="visibility: visible;">
+                              <input type="radio" name="direction" value="back">
+                              უკანა                    </label>
+                      </div>
+                      <div class="clearfix maika-input-group pull-center" id="maika-gender" data-toggle="buttons">
+                                                                      <label class="btn maika-radio-btn maika-boy  active ">
+                                  <input type="radio" name="gender" value="boy" data-id="1" checked="checked">
+                                  ბიჭი                        </label>
+                                                                          <label class="btn maika-radio-btn maika-girl " style="visibility: visible;">
+                                  <input type="radio" name="gender" value="girl" data-id="2">
+                                  გოგო                        </label>
+                                                                  </div>
+                      <div class="clearfix maika-input-group" maika-type="" type-regular="">
+                          <label class="maika-label giordano-label">
+                              <input class="checkbox-skin" checked="" type="radio" value="regular" autocomplete="off" name="giordano">
+                              <span class="checkbox-skin"></span>
+                              <span class="giordano">
+                                  სტანდარტული                        </span>
+                              <span class="maika-label-text">
+                                  (იხილეთ ფოტო)
+                                  <div class="image-preview">
+                                      <img src="https://www.maika.ge/res/app/imgs/standard.jpg">
+                                  </div>
+                              </span>
+                          </label>
+                      </div>
+      
+                      <div class="clearfix maika-input-group" maika-type="" type-non-standard="" style="display: block;">
+                          <label class="maika-label giordano-label">
+                              <input class="checkbox-skin" type="radio" autocomplete="off" value="non-standard" name="giordano">
+                              <span class="checkbox-skin"></span>
+                              <span class="giordano">
+                                  არასტანდარტული                        </span>
+                              <span class="maika-label-text">
+                                  (იხილეთ ფოტო)
+                                  <div class="image-preview">
+                                      <img src="https://www.maika.ge/res/app/imgs/non-standard.jpg">
+                                  </div>
+                              </span>
+                          </label>
+                      </div>
+                      <div class="clearfix maika-input-group" maika-type="" type-giordano="" style="display: block;">
+                          <label class="maika-label giordano-label" style="text-align: left">
+                              <input class="checkbox-skin" type="radio" autocomplete="off" value="giordano" name="giordano">
+                              <span class="checkbox-skin"></span>
+                              <span class="giordano">
+                                  Giordano                        </span>
+                              <span class="giordano_tshirt">
+                                  -ს მაისური                        </span>
+                              <img class="giordano-img" src="https://www.maika.ge/res/app/imgs/giordano.png" alt="Giordano">
+                              <span class="maika-label-text">
+                                  (იხილეთ ფოტო)
+                                  <div class="image-preview">
+                                      <img src="https://www.maika.ge/res/app/imgs/type-giordano.jpg">
+                                  </div>
+                              </span>
+                          </label>
+                      </div>
+                      <div style="display: none; margin-bottom: 25px;" waikiki="">
+                          <img style="display: block" width="105px" src="https://www.maika.ge/res/app/imgs/waikiki-logo.png" alt="Waikiki">
+                      </div>
+      
+                      <div class="clearfix maika-input-group" maika-type="" type-premium="">
+                          <label class="maika-label giordano-label">
+                              <input class="checkbox-skin" type="radio" autocomplete="off" value="premium" name="giordano">
+                              <span class="checkbox-skin"></span>
+                              <span class="giordano">
+                                  Premium                        </span>
+                              <span class="giordano_tshirt">
+                                  ხარისხი                        </span>
+                              <span class="maika-label-text">
+                                  (იხილეთ ფოტო)
+                                  <div class="image-preview">
+                                      <img src="https://www.maika.ge/res/app/imgs/type-premium.jpg">
+                                  </div>
+                              </span>
+                          </label>
+                      </div>
+      
+                      <div class="clearfix maika-input-group" maika-type="" type-waikiki="">
+                          <label class="maika-label giordano-label">
+                              <input class="checkbox-skin" type="radio" autocomplete="off" value="waikiki" name="giordano">
+                              <span class="checkbox-skin"></span>
+                              <span class="giordano">
+                                  Waikiki                        </span>
+                              <span class="giordano_tshirt">
+                                  -ს მაისური                        </span>
+                          </label>
+                      </div>
+      
+      
+                      <div class="clearfix maika-input-group" maika-type="" type-oversize="">
+                          <label class="maika-label giordano-label">
+                              <input class="checkbox-skin" type="radio" value="oversize" autocomplete="off" name="giordano">
+                              <span class="checkbox-skin"></span>
+                              <span class="giordano">
+      
+                              </span>
+                              <span class="giordano_tshirt">
+                                  OVERSIZE
+                              </span>
+                              <span class="maika-label-text">
+                                  (იხილეთ ფოტო)
+                                  <div class="image-preview">
+                                      <img src="https://www.maika.ge/res/app/imgs/type-oversize.jpg">
+                                  </div>
+                              </span>
+                          </label>
+                      </div>
+                      
+      
+                      <div class="clearfix">
+                          <a href="javascript:" class="btn maika-order-btn" id="maika-maiker-order">
+                              <span class="price">ფასი:</span>
+                              <span class="price_num" total-price="">29</span>
+                              <span class="gel white"></span>
+                              &nbsp;
+                              შეუკვეთე                    </a>
+      
+                      </div>
+                  </div>
+                  <input type="hidden" name="total_price" value="29">
+                  <div class="maika-maker-bottom">
+      
+                      <a href="javascript:" title="ვერტიკალურად შეტრიალება" id="maika-layer-flip-vertical" class="maika-layer-flip-vertical">ვერტიკალურად შეტრიალება</a>
+                      <a href="javascript:" title="ჰორიზონტალურად შეტრიალება" id="maika-layer-flip-horizontal" class="maika-layer-flip-horizontal">ჰორიზონტალურად შეტრიალება</a>
+                      <a href="javascript:" title="წაშლა" id="maika-layer-remove" class="maika-layer-remove">წაშლა</a>
+                      <a href="javascript:" title="ფონად გატანა" id="maika-layer-send-backwards" class="maika-layer-send-backwards">ფონად გატანა</a>
+                      <a href="javascript:" title="წინ გამოტანა" id="maika-layer-bring-forward" class="maika-layer-bring-forward">წინ გამოტანა</a>
+                  </div>
+              </div>
+              <div class="clearfix maika-before-make" id="maika-before-make" style="display: none;">
+                  <div class="super-text">დაამზადე მაისური  შენი გემოვნებით</div>
+                  <div class="clear"></div>
+                  <div class="super-arrow"></div>
+                  <a href="javascript:" id="start-maika-maker" class="super-btn">დაიწყე!</a>
+              </div>
+              <div class="maika-maker-canvas" id="maika-maker-canvas" style="">
+                  <div id="maika-maker-front-wrap">
+                      <div class="canvas-container" style="width: 420px; height: 504px; position: relative; user-select: none;"><canvas id="maika-maker-front" style="width: 420px; height: 504px; position: absolute; left: 0px; top: 0px; user-select: none;" class="lower-canvas" width="420" height="504"></canvas><canvas class="upper-canvas " width="420" height="504" style="width: 420px; height: 504px; position: absolute; left: 0px; top: 0px; user-select: none; cursor: default;"></canvas></div>
+                  </div>
+                  <div id="maika-maker-back-wrap" style="display: none">
+                      <div class="canvas-container" style="width: 420px; height: 504px; position: relative; user-select: none;"><canvas id="maika-maker-back" style="width: 420px; height: 504px; position: absolute; left: 0px; top: 0px; user-select: none;" class="lower-canvas" width="420" height="504"></canvas><canvas class="upper-canvas " width="420" height="504" style="width: 420px; height: 504px; position: absolute; left: 0px; top: 0px; user-select: none;"></canvas></div>
+                  </div>
+              </div>
+      
+              <div class="maika-impossible">
+                              <p>
+                      მაისურის შესაკვეთად აუცილებელია შემობრძანდეთ პერსონალური კომპიუტერის მეშვეობით, ან მოგვწერეთ ფეისბუქ გვერდზე:
+                      <a href="http://facebook.com/maika.ge" target="_blank">
+                          www.facebook.com/maika.ge
+                      </a>
+                  </p>
+      
+                  <div class="maika-impossible-img"></div>
+              </div>
+      
+      
+          </div>
+      </div>
+    
   </div>
 
     <script src="script.js"></script>

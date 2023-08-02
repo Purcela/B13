@@ -49,3 +49,16 @@
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'Harrington';
+    src: url('../../fonts/Harrington.eot');
+    src: url('../../fonts/Harrington.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/Harrington.woff2') format('woff2'),
+        url('../../fonts/Harrington.woff') format('woff'),
+        url('../../fonts/Harrington.ttf') format('truetype'),
+        url('../../fonts/Harrington.svg#Harrington') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

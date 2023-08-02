@@ -1,3 +1,8 @@
+$("#burger-menu").on("click", function(){
+    $("#menu1").toggleClass("open-menu");
+  })
+
+
 function myFunction(imgs) {
   var expandImg = document.getElementById("expandedImg");
   var imgText = document.getElementById("imgtext");

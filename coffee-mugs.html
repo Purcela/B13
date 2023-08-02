@@ -25,15 +25,13 @@
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ka_GE/sdk.js#xfbml=1&version=v13.0" nonce="3QtqbD8y">
     </script>
     <header>
-        <div class="logo-box">           
-            <a class="header-logo" href="index.html">
-                <img class="logo-img" src="img/B13.svg" alt="logo">
-            </a>
+        <div class="free-box">           
+            
         </div>
         <div class="menu-box">
             <ul id="menu" class="menu-ul">
                 <li> <a class="menu-click" href="index.html"> B13 </a> </li>
-                <li> <a class="menu-click" href="T-shirt.html"> T-shirts & Hoods </a> </li>
+                <li> <a class="menu-click" href="T-shirt.html"> T-shirts & clothes </a> </li>
                 <li> <a class="menu-click active" href="coffee-mugs.html"> coffee mugs </a> </li>
                 <li> <a class="menu-click" href="Bags-&-more.html"> Bags & more </a> </li>
                 <li> <a class="menu-click" href="Keychain-&-more.html"> Keychain & more </a> </li>
@@ -55,8 +53,26 @@
         
     </header>
     <div class="body-div" >
-        <div class="stick-box">             
-            <div class="free-box width-3"> </div>
+        <div class="stick-box">
+            <div class="language-box1"></div>
+            <div id="burger-menu" class="burger-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul id="menu1" class="menu-ul1">
+                <li> <a class="menu-click" href="index.html"> B13 </a> </li>
+                <li> <a class="menu-click" href="T-shirt.html"> T-shirts & clothes </a> </li>
+                <li> <a class="menu-click active" href="coffee-mugs.html"> coffee mugs </a> </li>
+                <li> <a class="menu-click" href="Bags-&-more.html"> Bags & more </a> </li>
+                <li> <a class="menu-click" href="Keychain-&-more.html"> Keychain & more </a> </li>
+                <li> <a class="menu-click" href="Phone-Cases.html"> Phone Cases </a> </li>
+                <li> <a class="menu-click" href="Pillow-Cases.html"> Pillow Cases </a> </li>
+                <li> <a class="menu-click" href="about.html"> About Us </a> </li>
+            </ul>               
+            <div class="logo-box">           
+                <a class="header-logo" href="index.html">
+                    <img class="logo-img" src="img/B13.svg" alt="logo">
+                </a>
+            </div>
             <div class="flag-box width-3">
                 <h1> B13 </h1>
                 <h5> Break The Stereotypes </h5>
@@ -73,33 +89,29 @@
         <div class="main-info">
             <select id="mySelect" onchange="myFunction()">
                 <option value="all">All</option>
-                <option value="Samsung">Samsung</option>
-                <option value="Iphone">Iphone</option>
-                <option value="Huawei">Huawei</option>
-                <option value="Xiaomi">Xiaomi</option>
-                <option value="Others">Others</option>
+                <option value="coffee-mug">coffee mugs</option>
+                <option value="thermo-mug">thermo mugs</option>
+                <option value="others">Others</option>
             </select> 
             <div class="gallery-container">
-                <img data-enlargable class="gallery-img coffee-img" src="img/coffee-mugs/coffee-mug-1.jpg" alt="t-shirt">
-                <img data-enlargable class="gallery-img coffee-img" src="img/coffee-mugs/coffee-mug-2.jpg" alt="t-shirt">
-                <img data-enlargable class="gallery-img coffee-img" src="img/coffee-mugs/coffee-mug-3.jpg" alt="t-shirt">
-                <img data-enlargable class="gallery-img coffee-img" src="img/coffee-mugs/coffee-mug-4.jpg" alt="t-shirt">
-                <img data-enlargable class="gallery-img coffee-img" src="img/coffee-mugs/coffee-mug-5.jpg" alt="t-shirt">
-                <img data-enlargable class="gallery-img coffee-img" src="img/coffee-mugs/coffee-mug-1.jpg" alt="t-shirt">
-                <img data-enlargable class="gallery-img coffee-img" src="img/coffee-mugs/coffee-mug-2.jpg" alt="t-shirt">
-                <img data-enlargable class="gallery-img coffee-img" src="img/coffee-mugs/coffee-mug-3.jpg" alt="t-shirt">
-                <img data-enlargable class="gallery-img coffee-img" src="img/coffee-mugs/coffee-mug-4.jpg" alt="t-shirt">
-                <img data-enlargable class="gallery-img coffee-img" src="img/coffee-mugs/coffee-mug-5.jpg" alt="t-shirt">
-                <img data-enlargable class="gallery-img coffee-img" src="img/coffee-mugs/coffee-mug-1.jpg" alt="t-shirt">
-                <img data-enlargable class="gallery-img coffee-img" src="img/coffee-mugs/coffee-mug-2.jpg" alt="t-shirt">
-                <img data-enlargable class="gallery-img coffee-img" src="img/coffee-mugs/coffee-mug-3.jpg" alt="t-shirt">
-                <img data-enlargable class="gallery-img coffee-img" src="img/coffee-mugs/coffee-mug-4.jpg" alt="t-shirt">
-                <img data-enlargable class="gallery-img coffee-img" src="img/coffee-mugs/coffee-mug-5.jpg" alt="t-shirt">
-                <img data-enlargable class="gallery-img coffee-img" src="img/coffee-mugs/coffee-mug-1.jpg" alt="t-shirt">
-                <img data-enlargable class="gallery-img coffee-img" src="img/coffee-mugs/coffee-mug-2.jpg" alt="t-shirt">
-                <img data-enlargable class="gallery-img coffee-img" src="img/coffee-mugs/coffee-mug-3.jpg" alt="t-shirt">
-                <img data-enlargable class="gallery-img coffee-img" src="img/coffee-mugs/coffee-mug-4.jpg" alt="t-shirt">
-                <img data-enlargable class="gallery-img coffee-img" src="img/coffee-mugs/coffee-mug-5.jpg" alt="t-shirt">
+                <img data-enlargable class="gallery-img coffee-img" src="img/coffee-mugs/coffee-mug-1.jpg" value="coffee-mug" alt="coffee-mug">
+                <img data-enlargable class="gallery-img coffee-img" src="img/coffee-mugs/coffee-mug-2.jpg" value="coffee-mug" alt="coffee-mug">
+                <img data-enlargable class="gallery-img coffee-img" src="img/coffee-mugs/coffee-mug-3.jpg" value="coffee-mug" alt="coffee-mug">
+                <img data-enlargable class="gallery-img coffee-img" src="img/coffee-mugs/coffee-mug-4.jpg" value="coffee-mug" alt="coffee-mug">
+                <img data-enlargable class="gallery-img coffee-img" src="img/coffee-mugs/coffee-mug-5.jpg" value="others" alt="others">
+                <img data-enlargable class="gallery-img coffee-img" src="img/coffee-mugs/thermo-mug-1.jpg" value="thermo-mug" alt="thermo-mug">
+                <img data-enlargable class="gallery-img coffee-img" src="img/coffee-mugs/thermo-mug-2.jpg" value="thermo-mug" alt="thermo-mug">
+                <img data-enlargable class="gallery-img coffee-img" src="img/coffee-mugs/thermo-mug-3.jpg" value="others" alt="others">
+                <img data-enlargable class="gallery-img coffee-img" src="img/coffee-mugs/thermo-mug-4.jpg" value="others" alt="others">
+                <img data-enlargable class="gallery-img coffee-img" src="img/coffee-mugs/coffee-mug-1.jpg" value="coffee-mug" alt="coffee-mug">
+                <img data-enlargable class="gallery-img coffee-img" src="img/coffee-mugs/coffee-mug-2.jpg" value="coffee-mug" alt="coffee-mug">
+                <img data-enlargable class="gallery-img coffee-img" src="img/coffee-mugs/coffee-mug-3.jpg" value="coffee-mug" alt="coffee-mug">
+                <img data-enlargable class="gallery-img coffee-img" src="img/coffee-mugs/coffee-mug-4.jpg" value="coffee-mug" alt="coffee-mug">
+                <img data-enlargable class="gallery-img coffee-img" src="img/coffee-mugs/coffee-mug-5.jpg" value="others" alt="others">
+                <img data-enlargable class="gallery-img coffee-img" src="img/coffee-mugs/thermo-mug-1.jpg" value="thermo-mug" alt="thermo-mug">
+                <img data-enlargable class="gallery-img coffee-img" src="img/coffee-mugs/thermo-mug-2.jpg" value="thermo-mug" alt="thermo-mug">
+                <img data-enlargable class="gallery-img coffee-img" src="img/coffee-mugs/thermo-mug-3.jpg" value="others" alt="others">
+                <img data-enlargable class="gallery-img coffee-img" src="img/coffee-mugs/thermo-mug-4.jpg" value="others" alt="others">
             </div>
         </div>
 

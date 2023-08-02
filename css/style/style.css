@@ -84,6 +84,14 @@ a {
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "Harrington";
+  src: url("../../fonts/Harrington.eot");
+  src: url("../../fonts/Harrington.eot?#iefix") format("embedded-opentype"), url("../../fonts/Harrington.woff2") format("woff2"), url("../../fonts/Harrington.woff") format("woff"), url("../../fonts/Harrington.ttf") format("truetype"), url("../../fonts/Harrington.svg#Harrington") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 body {
   width: 100%;
   height: 100vh;
@@ -105,20 +113,16 @@ body header {
   padding: 5px;
   background-color: #dddde1;
   position: fixed;
-  z-index: 2;
   left: 0;
   top: 0;
 }
-body header .logo-box {
-  width: 100%;
-  height: 20%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@media (max-width: 640px) {
+  body header {
+    display: none;
+  }
 }
-body header .logo-box .logo-img {
-  width: 50px;
-  height: 50px;
+body header .free-box {
+  height: 25%;
 }
 body header .menu-box {
   width: 100%;
@@ -158,6 +162,7 @@ body header .menu-box .about-info {
 }
 body header .menu-box .about-info .about-li {
   font-family: "Fjalla One";
+  font-size: 18px;
 }
 body header .menu-box .about-info .about-li .active {
   font-weight: bold;
@@ -169,7 +174,7 @@ body header .menu-box .about-info .social {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin: 20px 0;
+  margin: 30px 0;
 }
 body header .menu-box .about-info .social .fa-facebook-f,
 body header .menu-box .about-info .social .fa-twitter,
@@ -214,30 +219,115 @@ body .body-div .stick-box {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 10px;
+  padding: 5px 10px 5px 0;
   background-color: #dddde1;
   position: fixed;
   top: 0;
 }
-@media (max-width: 1480px) {
-  body .body-div .stick-box .free-box {
-    width: 5%;
+body .body-div .stick-box .burger-icon {
+  display: none;
+}
+@media (max-width: 640px) {
+  body .body-div .stick-box .burger-icon {
+    display: block;
+    color: black;
+    font-size: 30px;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    cursor: pointer;
   }
 }
-@media (max-width: 1160px) {
-  body .body-div .stick-box .free-box {
-    width: 10%;
+body .body-div .stick-box .menu-ul1 {
+  display: none;
+}
+body .body-div .stick-box .menu-ul1 li {
+  font-family: "Fjalla One";
+  font-size: 16px;
+}
+body .body-div .stick-box .menu-ul1 li .active {
+  font-weight: bold;
+  color: darkblue;
+}
+body .body-div .stick-box .menu-ul1 li a {
+  color: black;
+}
+body .body-div .stick-box .menu-ul1 li:first-child {
+  font-size: 18px;
+}
+body .body-div .stick-box .menu-ul1 li:last-child {
+  margin-top: 15px;
+}
+@media (max-width: 640px) {
+  body .body-div .stick-box .menu-ul1.open-menu {
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 2;
+    top: 50px;
+    left: 15px;
+    padding: 5px;
+    background-color: #dddde1;
   }
 }
-@media (max-width: 920px) {
-  body .body-div .stick-box .free-box {
-    width: 15%;
+body .body-div .stick-box .about-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+body .body-div .stick-box .about-info .about-li {
+  font-family: "Fjalla One";
+  font-size: 18px;
+}
+body .body-div .stick-box .about-info .about-li .active {
+  font-weight: bold;
+  color: darkblue;
+}
+body .body-div .stick-box .about-info .social {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 30px 0;
+}
+body .body-div .stick-box .about-info .social .fa-facebook-f,
+body .body-div .stick-box .about-info .social .fa-twitter,
+body .body-div .stick-box .about-info .social .instagram-logo {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  background-color: #3B5998;
+  color: #FFFFFF;
+}
+body .body-div .stick-box .about-info .social .fa-twitter {
+  background-color: #55ACEE;
+  color: #FFFFFF;
+}
+body .body-div .stick-box .logo-box {
+  width: 170px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 640px) {
+  body .body-div .stick-box .logo-box {
+    display: none;
   }
 }
-@media (max-width: 610px) {
-  body .body-div .stick-box .free-box {
-    width: 35%;
-  }
+body .body-div .stick-box .logo-box .logo-img {
+  width: 50px;
+  height: 50px;
 }
 body .body-div .stick-box .flag-box {
   height: 95%;
@@ -253,7 +343,7 @@ body .body-div .stick-box .flag-box {
   background-position: center;
 }
 body .body-div .stick-box .flag-box h1 {
-  font-family: "Great Vibes";
+  font-family: "Harrington";
   font-size: 50px;
   font-weight: bolder;
   color: #434141;
@@ -266,26 +356,42 @@ body .body-div .stick-box .flag-box .geo-map {
   max-width: 250px;
   max-height: 100%;
 }
-body .body-div .stick-box .language-box {
+body .body-div .stick-box .language-box,
+body .body-div .stick-box .language-box1 {
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
-body .body-div .stick-box .language-box a .language-flag {
+body .body-div .stick-box .language-box a .language-flag,
+body .body-div .stick-box .language-box1 a .language-flag {
   max-width: 20px;
   max-height: 20px;
   margin-top: 10px;
 }
+body .body-div .stick-box .language-box1 {
+  display: none;
+}
+@media (max-width: 640px) {
+  body .body-div .stick-box .language-box1 {
+    display: block;
+  }
+}
 body .body-div .main-info {
   margin-top: 200px;
   margin-left: 170px;
-  padding: 0 20px;
+  padding: 20px;
+}
+@media (max-width: 640px) {
+  body .body-div .main-info {
+    margin-left: 0;
+  }
 }
 body .body-div .main-info select {
-  height: 20px;
+  width: 120px;
+  height: 30px;
   position: fixed;
-  left: 175px;
+  right: 30px;
   top: 205px;
 }
 body .body-div .main-info .demo {
@@ -298,7 +404,7 @@ body .body-div .main-info .gallery-container {
 body .body-div .main-info .gallery-container .gallery-img {
   width: 150px;
   height: 150px;
-  margin: 20px;
+  margin: 30px;
   cursor: zoom-in;
 }
 body .body-div .index-main-info {
@@ -311,6 +417,16 @@ body .body-div .index-main-info {
 body .body-div .index-main-info h3 {
   font-family: "Henny Penny";
   font-size: 35px;
+}
+@media (max-width: 805px) {
+  body .body-div .index-main-info h3 {
+    font-size: 25px;
+  }
+}
+@media (max-width: 480px) {
+  body .body-div .index-main-info h3 {
+    font-size: 16px;
+  }
 }
 
 body .body-div .about-info {
