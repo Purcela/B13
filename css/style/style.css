@@ -114,15 +114,12 @@ body header {
   background-color: #dddde1;
   position: fixed;
   left: 0;
-  top: 0;
+  top: 200px;
 }
 @media (max-width: 640px) {
   body header {
     display: none;
   }
-}
-body header .free-box {
-  height: 25%;
 }
 body header .menu-box {
   width: 100%;
@@ -400,11 +397,12 @@ body .body-div .main-info .demo {
 body .body-div .main-info .gallery-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 body .body-div .main-info .gallery-container .gallery-img {
   width: 150px;
   height: 150px;
-  margin: 30px;
+  margin: 25px;
   cursor: zoom-in;
 }
 body .body-div .index-main-info {
