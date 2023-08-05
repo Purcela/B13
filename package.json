@@ -295,5 +295,9 @@
     "y18n": "^3.2.2",
     "yargs": "^7.1.2",
     "yargs-parser": "^5.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://purcela.github.io/B13/"
   }
 }
