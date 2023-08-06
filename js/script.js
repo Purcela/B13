@@ -45,7 +45,21 @@ function myFunction() {
     document.getElementById("demo").innerHTML = "You selected: " + selectedCategory;
 }
 
-//-------------------------- TEST -------------------------------------
+function searchByID() {
+    var input, filter, gallery, productBoxes, idBoxes, i;
+    input = document.getElementById('searchInput');
+    filter = input.value.toUpperCase();
+    gallery = document.querySelector('.gallery-container');
+    productBoxes = gallery.querySelectorAll('.product-box');
+    idBoxes = gallery.querySelectorAll('.id-box');
 
+    for (i = 0; i < productBoxes.length; i++) {
+        if (idBoxes[i].textContent.toUpperCase().indexOf(filter) > -1) {
+            productBoxes[i].style.display = '';
+        } else {
+            productBoxes[i].style.display = 'none';
+        }
+    }
+}
 
 

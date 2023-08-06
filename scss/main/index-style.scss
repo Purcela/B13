@@ -231,16 +231,28 @@ body {
         .main-info {
             margin-top: 200px;
             margin-left: 170px;
-            padding: 20px;
+            padding: 10px;
+            padding-top: 35px;
             @media (max-width: 640px) {
                 margin-left: 0;
+            }
+            .search-box {
+                width: 120px;
+                height: 30px;
+                position: fixed;
+                right: 150px;
+                top: 201px;
+                input {
+                    width: 100%;
+                    height: 100%;
+                }
             }
             select {
                 width: 120px;
                 height: 30px;
                 position: fixed;
-                right: 30px;
-                top: 205px;
+                right: 20px;
+                top: 201px;
             }
             .demo {
                 margin-top: 30px;
@@ -268,9 +280,14 @@ body {
                         display: flex;
                         justify-content: space-around;
                         align-items: center;
-                        .price-box {
-                            font-family: $L-reg;
-                            color: green;
+                        .id-box {
+                            font-family: $fo-reg;
+                        }
+                        .order-box {
+                            border: 2px solid green;
+                            border-radius: 10px;
+                            box-shadow: 0 3px darkgreen;
+                            cursor: grab;
                         }
                     }
                 }

@@ -340,19 +340,31 @@ body .body-div .stick-box .info-box .info-img {
 body .body-div .main-info {
   margin-top: 200px;
   margin-left: 170px;
-  padding: 20px;
+  padding: 10px;
+  padding-top: 35px;
 }
 @media (max-width: 640px) {
   body .body-div .main-info {
     margin-left: 0;
   }
 }
+body .body-div .main-info .search-box {
+  width: 120px;
+  height: 30px;
+  position: fixed;
+  right: 150px;
+  top: 201px;
+}
+body .body-div .main-info .search-box input {
+  width: 100%;
+  height: 100%;
+}
 body .body-div .main-info select {
   width: 120px;
   height: 30px;
   position: fixed;
-  right: 30px;
-  top: 205px;
+  right: 20px;
+  top: 201px;
 }
 body .body-div .main-info .demo {
   margin-top: 30px;
@@ -383,9 +395,14 @@ body .body-div .main-info .gallery-container .product-box .shop-box {
   justify-content: space-around;
   align-items: center;
 }
-body .body-div .main-info .gallery-container .product-box .shop-box .price-box {
-  font-family: "Lobster";
-  color: green;
+body .body-div .main-info .gallery-container .product-box .shop-box .id-box {
+  font-family: "Fjalla One";
+}
+body .body-div .main-info .gallery-container .product-box .shop-box .order-box {
+  border: 2px solid green;
+  border-radius: 10px;
+  box-shadow: 0 3px darkgreen;
+  cursor: grab;
 }
 body .body-div .index-main-info {
   display: flex;

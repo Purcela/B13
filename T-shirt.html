@@ -85,6 +85,9 @@
             </div>            
         </div>
         <div class="main-info">
+            <div class="search-box">
+                <input type="text" id="searchInput" oninput="searchByID()" placeholder="Search with ID">
+            </div>
             <select id="mySelect" onchange="myFunction()">
                 <option value="all">All</option>
                 <option value="t-shirts">T-shirts</option>
@@ -97,21 +100,47 @@
                 <div class="product-box" value="t-shirts">
                     <img data-enlargable class="product-img clothes-img" src="img/clothes/t-hirt-1.jpg" alt="t-shirt">
                     <div class="shop-box">   
-                        <p class="price-box"> 30 USD</p>
-                        <button class="buy-box"> buy now </button>
+                        <p class="id-box"> TS001 </p>
+                        <a href="https://www.facebook.com/" target="tab">
+                            <button class="order-box"> order now </button>
+                        </a>
                     </div>
                 </div>
                 <div class="product-box" value="hoods">
                     <img data-enlargable class="product-img clothes-img" src="img/clothes/hood-1.jpg" alt="hood">
+                    <div class="shop-box">   
+                        <p class="id-box"> H002 </p>
+                        <a href="https://www.facebook.com/" target="tab">
+                            <button class="order-box"> order now </button>
+                        </a>
+                    </div>
                 </div>                
                 <div class="product-box" value="bodysuits">
                     <img data-enlargable class="product-img clothes-img" src="img/clothes/Bodysuits-1.jpg" alt="Bodysuits"> 
+                    <div class="shop-box">   
+                        <p class="id-box"> BS003</p>
+                        <a href="https://www.facebook.com/" target="tab">
+                            <button class="order-box"> order now </button>
+                        </a>
+                    </div>
                 </div>                               
                 <div class="product-box" value="babies">
                     <img data-enlargable class="product-img clothes-img" src="img/clothes/babi-Bodysuits-1.jpg" alt="babi-Bodysuits">
+                    <div class="shop-box">   
+                        <p class="id-box"> BB004</p>
+                        <a href="https://www.facebook.com/" target="tab">
+                            <button class="order-box"> order now </button>
+                        </a>
+                    </div>
                 </div>                                
                 <div class="product-box" value="others">
                     <img data-enlargable class="product-img clothes-img" src="img/clothes/t-hirt-2.jpg" alt="t-shirt">
+                    <div class="shop-box">   
+                        <p class="id-box"> Z005</p>
+                        <a href="https://www.facebook.com/" target="tab">
+                            <button class="order-box"> order now </button>
+                        </a>
+                    </div>
                 </div>                
             </div>
         </div>
