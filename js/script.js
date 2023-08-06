@@ -28,7 +28,7 @@ $('img[data-enlargable]').addClass('img-enlargable').click(function(){
 
 // Get the gallery container and all the gallery images
 const galleryContainer = document.querySelector('.gallery-container');
-const galleryImages = document.querySelectorAll('.gallery-img');
+const galleryImages = document.querySelectorAll('.product-box');
 
 function myFunction() {
     var selectedCategory = document.getElementById("mySelect").value;

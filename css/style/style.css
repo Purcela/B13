@@ -362,11 +362,30 @@ body .body-div .main-info .gallery-container {
   flex-wrap: wrap;
   justify-content: center;
 }
-body .body-div .main-info .gallery-container .gallery-img {
+body .body-div .main-info .gallery-container .product-box {
   width: 150px;
-  height: 150px;
+  height: 210px;
   margin: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+body .body-div .main-info .gallery-container .product-box .product-img {
+  width: 100%;
+  height: auto;
   cursor: zoom-in;
+}
+body .body-div .main-info .gallery-container .product-box .shop-box {
+  width: 100%;
+  height: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+body .body-div .main-info .gallery-container .product-box .shop-box .price-box {
+  font-family: "Lobster";
+  color: green;
 }
 body .body-div .index-main-info {
   display: flex;

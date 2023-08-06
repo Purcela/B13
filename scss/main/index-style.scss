@@ -70,7 +70,7 @@ body {
                 width: 50px;
                 height: 50px;
             }
-        }            
+        }      
         .flag-box{
             height: 95%;
             display: flex;
@@ -248,12 +248,31 @@ body {
             .gallery-container {  
                 display: flex;
                 flex-wrap: wrap;
-                justify-content: center;  
-                .gallery-img {
+                justify-content: center; 
+                .product-box { 
                     width: 150px;
-                    height: 150px;
+                    height: 210px;
                     margin: 25px;
-                    cursor: zoom-in;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    .product-img {
+                        width: 100%;
+                        height: auto;
+                        cursor: zoom-in;
+                    }
+                    .shop-box {
+                        width: 100%;
+                        height: 20px;
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        .price-box {
+                            font-family: $L-reg;
+                            color: green;
+                        }
+                    }
                 }
             }
         }
