@@ -1,7 +1,11 @@
+
+// -------------------------  burger box  ---------------------------------
+
 $("#burger-menu").on("click", function(){
     $("#menu1").toggleClass("open-menu");
   })
 
+// -------------------------  
 
 function myFunction(imgs) {
   var expandImg = document.getElementById("expandedImg");
@@ -26,6 +30,8 @@ $('img[data-enlargable]').addClass('img-enlargable').click(function(){
   }).appendTo('body');
 });
 
+// -----------------------------  sort by ----------------------------
+
 // Get the gallery container and all the gallery images
 const galleryContainer = document.querySelector('.gallery-container');
 const galleryImages = document.querySelectorAll('.product-box');
@@ -36,7 +42,7 @@ function myFunction() {
     // Loop through all gallery images
     galleryImages.forEach((img) => {
         if (selectedCategory === 'all' || img.getAttribute('value') === selectedCategory.toLowerCase()) {
-            img.style.display = 'block'; // Show the image if it matches the selected category or 'All'
+            img.style.display = 'flex'; // Show the image if it matches the selected category or 'All'
         } else {
             img.style.display = 'none'; // Hide the image if it doesn't match the selected category
         }
@@ -45,6 +51,7 @@ function myFunction() {
     document.getElementById("demo").innerHTML = "You selected: " + selectedCategory;
 }
 
+// ------------------------------- search ------------------------------
 function searchByID() {
     var input, filter, gallery, productBoxes, idBoxes, i;
     input = document.getElementById('searchInput');
