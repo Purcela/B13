@@ -3,12 +3,15 @@ const sass = require('gulp-sass')(require('sass'));
 
 function buildStyles() {
   return gulp.src('scss/style.scss')
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass().on('error', function(error) {
+      console.error(error.message);
+    }))
     .pipe(gulp.dest('css/style'));
 }
 
+
 function watch() {
-  gulp.watch('scss/*/*.scss', buildStyles);
+  gulp.watch('scss/**/*.scss', buildStyles);
 }
 
 gulp.task('buildStyles', buildStyles);

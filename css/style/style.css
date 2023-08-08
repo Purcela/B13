@@ -376,7 +376,6 @@ body .body-div .main-info .gallery-container {
 }
 body .body-div .main-info .gallery-container .product-box {
   width: 150px;
-  height: 210px;
   margin: 25px;
   display: flex;
   flex-direction: column;
@@ -390,13 +389,14 @@ body .body-div .main-info .gallery-container .product-box .product-img {
 }
 body .body-div .main-info .gallery-container .product-box .shop-box {
   width: 100%;
-  height: 20px;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   align-items: center;
+  margin-top: 15px;
 }
 body .body-div .main-info .gallery-container .product-box .shop-box .id-box {
   font-family: "Fjalla One";
+  margin-bottom: 10px;
 }
 body .body-div .main-info .gallery-container .product-box .shop-box .order-box {
   border: 2px solid green;
