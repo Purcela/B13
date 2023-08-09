@@ -397,6 +397,8 @@ body .body-div .main-info .gallery-container .product-box .shop-box {
 body .body-div .main-info .gallery-container .product-box .shop-box .id-box {
   font-family: "Fjalla One";
   margin-bottom: 10px;
+  text-align: center;
+  width: 70%;
 }
 body .body-div .main-info .gallery-container .product-box .shop-box .order-box {
   border: 2px solid green;
