@@ -69,6 +69,16 @@ function searchByID() {
     }
 }
 
+//--------------------------- share buttons --------------------------------
+function shareOnFacebook() {
+    var url = "https://purcela.github.io/B13/";
+    var facebookUrl = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(url);
+    window.open(facebookUrl, "_blank", "width=600,height=400");
+}
+
+// Attach click event to the Facebook share button
+var facebookShareButton = document.querySelector(".facebook_share_btn");
+facebookShareButton.addEventListener("click", shareOnFacebook);
 
 // ------------------------------ testing -------------------------------------
 

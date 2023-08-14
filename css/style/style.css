@@ -106,7 +106,7 @@ body .body-div .stick-box, body .body-div {
 
 body header {
   width: 100%;
-  height: 25%;
+  height: 180px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -114,6 +114,7 @@ body header {
   background-color: #dddde1;
   position: fixed;
   top: 0;
+  z-index: 2;
 }
 body header .burger-icon {
   display: none;
@@ -236,16 +237,17 @@ body .body-div {
 }
 body .body-div .stick-box {
   width: 170px;
-  height: 75%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   padding: 10px 5px;
+  padding-top: 180px;
   background-color: #dddde1;
   position: fixed;
   left: 0;
-  top: 25%;
+  top: 0;
 }
 @media (max-width: 640px) {
   body .body-div .stick-box {
@@ -303,68 +305,69 @@ body .body-div .stick-box .about-info .about-li .active {
 body .body-div .stick-box .about-info .soc-menu {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   width: 100%;
   height: 60px;
 }
-body .body-div .stick-box .about-info .soc-menu .menu,
-body .body-div .stick-box .about-info .soc-menu .menu-1 {
+body .body-div .stick-box .about-info .soc-menu a .fa-facebook-f,
+body .body-div .stick-box .about-info .soc-menu a .twitter-1,
+body .body-div .stick-box .about-info .soc-menu a .instagram-logo {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60px;
-  height: 60px;
+  font-size: 20px;
+  background-color: #3B5998;
+  color: #FFFFFF;
+}
+body .body-div .stick-box .about-info .soc-menu a .twitter-1 {
+  background-color: #55ACEE;
+  color: #FFFFFF;
+}
+body .body-div .stick-box .about-info .soc-menu .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
   text-align: center;
   box-sizing: border-box;
-  font-size: 26px;
+  font-size: 16px;
 }
-body .body-div .stick-box .about-info .soc-menu .menu .menu-open,
-body .body-div .stick-box .about-info .soc-menu .menu-1 .menu-open {
+body .body-div .stick-box .about-info .soc-menu .menu .menu-open {
   display: none;
 }
-body .body-div .stick-box .about-info .soc-menu .menu .menu-1,
-body .body-div .stick-box .about-info .soc-menu .menu-1 .menu-1 {
-  margin-right: 50px;
-}
 body .body-div .stick-box .about-info .soc-menu .menu .menu-item,
-body .body-div .stick-box .about-info .soc-menu .menu .menu-open-button,
-body .body-div .stick-box .about-info .soc-menu .menu-1 .menu-item,
-body .body-div .stick-box .about-info .soc-menu .menu-1 .menu-open-button {
-  background: blue;
+body .body-div .stick-box .about-info .soc-menu .menu .menu-open-button {
   border-radius: 100%;
-  width: 50px;
-  height: 50px;
+  width: 36px;
+  height: 36px;
   position: absolute;
   color: #ffffff;
   text-align: center;
-  line-height: 53px;
+  line-height: 37px;
   transform: translate3d(0, 0, 0);
   transition: transform ease-out 200ms;
 }
 body .body-div .stick-box .about-info .soc-menu .menu .menu-item .share-icon,
-body .body-div .stick-box .about-info .soc-menu .menu .menu-open-button .share-icon,
-body .body-div .stick-box .about-info .soc-menu .menu-1 .menu-item .share-icon,
-body .body-div .stick-box .about-info .soc-menu .menu-1 .menu-open-button .share-icon {
+body .body-div .stick-box .about-info .soc-menu .menu .menu-open-button .share-icon {
   color: wheat;
 }
-body .body-div .stick-box .about-info .soc-menu .menu .menu-item:hover,
-body .body-div .stick-box .about-info .soc-menu .menu-1 .menu-item:hover {
+body .body-div .stick-box .about-info .soc-menu .menu .menu-open-button {
+  background: blue;
+}
+body .body-div .stick-box .about-info .soc-menu .menu .menu-item:hover {
   background: #eeeeee;
   color: #3290b1;
 }
 body .body-div .stick-box .about-info .soc-menu .menu .menu-item:nth-child(3),
-body .body-div .stick-box .about-info .soc-menu .menu-1 .menu-item:nth-child(3) {
-  transition-duration: 180ms;
-}
 body .body-div .stick-box .about-info .soc-menu .menu .menu-item:nth-child(4),
-body .body-div .stick-box .about-info .soc-menu .menu-1 .menu-item:nth-child(4) {
+body .body-div .stick-box .about-info .soc-menu .menu .menu-item:nth-child(5) {
   transition-duration: 180ms;
 }
-body .body-div .stick-box .about-info .soc-menu .menu .menu-item:nth-child(5),
-body .body-div .stick-box .about-info .soc-menu .menu-1 .menu-item:nth-child(5) {
-  transition-duration: 180ms;
-}
-body .body-div .stick-box .about-info .soc-menu .menu .menu-open-button,
-body .body-div .stick-box .about-info .soc-menu .menu-1 .menu-open-button {
+body .body-div .stick-box .about-info .soc-menu .menu .menu-open-button {
   z-index: 2;
   transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition-duration: 400ms;
@@ -372,50 +375,41 @@ body .body-div .stick-box .about-info .soc-menu .menu-1 .menu-open-button {
   cursor: pointer;
   box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
 }
-body .body-div .stick-box .about-info .soc-menu .menu .menu-open-button:hover,
-body .body-div .stick-box .about-info .soc-menu .menu-1 .menu-open-button:hover {
+body .body-div .stick-box .about-info .soc-menu .menu .menu-open-button:hover {
   transform: scale(1.2, 1.2) translate3d(0, 0, 0);
 }
-body .body-div .stick-box .about-info .soc-menu .menu .menu-open:checked + .menu-open-button,
-body .body-div .stick-box .about-info .soc-menu .menu-1 .menu-open:checked + .menu-open-button {
+body .body-div .stick-box .about-info .soc-menu .menu .menu-open:checked + .menu-open-button {
   transition-timing-function: linear;
   transition-duration: 200ms;
   transform: scale(0.8, 0.8) translate3d(0, 0, 0);
 }
-body .body-div .stick-box .about-info .soc-menu .menu .menu-open:checked ~ .menu-item,
-body .body-div .stick-box .about-info .soc-menu .menu-1 .menu-open:checked ~ .menu-item {
+body .body-div .stick-box .about-info .soc-menu .menu .menu-open:checked ~ .menu-item {
   transition-timing-function: cubic-bezier(0.935, 0, 0.34, 1.33);
 }
-body .body-div .stick-box .about-info .soc-menu .menu .menu-open:checked ~ .menu-item:nth-child(3),
-body .body-div .stick-box .about-info .soc-menu .menu-1 .menu-open:checked ~ .menu-item:nth-child(3) {
+body .body-div .stick-box .about-info .soc-menu .menu .menu-open:checked ~ .menu-item:nth-child(3) {
   transition-duration: 200ms;
-  transform: translate3d(200px, -150px, 0);
+  transform: translate3d(0, -60px, 0);
 }
-body .body-div .stick-box .about-info .soc-menu .menu .menu-open:checked ~ .menu-item:nth-child(4),
-body .body-div .stick-box .about-info .soc-menu .menu-1 .menu-open:checked ~ .menu-item:nth-child(4) {
-  transition-duration: 300ms;
-  transform: translate3d(350px, -150px, 0);
+body .body-div .stick-box .about-info .soc-menu .menu .menu-open:checked ~ .menu-item:nth-child(4) {
+  transition-duration: 200ms;
+  transform: translate3d(0, -120px, 0);
 }
-body .body-div .stick-box .about-info .soc-menu .menu .menu-open:checked ~ .menu-item:nth-child(5),
-body .body-div .stick-box .about-info .soc-menu .menu-1 .menu-open:checked ~ .menu-item:nth-child(5) {
-  transition-duration: 400ms;
-  transform: translate3d(500px, -150px, 0);
+body .body-div .stick-box .about-info .soc-menu .menu .menu-open:checked ~ .menu-item:nth-child(5) {
+  transition-duration: 200ms;
+  transform: translate3d(0, -180px, 0);
 }
-body .body-div .stick-box .about-info .soc-menu .menu .facebook_share_btn,
-body .body-div .stick-box .about-info .soc-menu .menu-1 .facebook_share_btn {
+body .body-div .stick-box .about-info .soc-menu .menu .facebook_share_btn {
   background-color: #3b5998;
   box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.12);
 }
-body .body-div .stick-box .about-info .soc-menu .menu .twitter_share_btn,
-body .body-div .stick-box .about-info .soc-menu .menu-1 .twitter_share_btn {
+body .body-div .stick-box .about-info .soc-menu .menu .twitter_share_btn {
   background-color: #00aced;
   box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.12);
 }
-body .body-div .stick-box .about-info .soc-menu .menu .instagram-logo,
-body .body-div .stick-box .about-info .soc-menu .menu-1 .instagram-logo {
-  width: 50px;
+body .body-div .stick-box .about-info .soc-menu .menu .instagram-logo {
+  width: 35px;
   height: auto;
   border-radius: 50%;
 }
@@ -434,7 +428,7 @@ body .body-div .stick-box .info-box .info-img {
   margin-top: 20px;
 }
 body .body-div .main-info {
-  margin-top: 180px;
+  margin-top: 210px;
   margin-left: 170px;
   padding: 10px;
 }
@@ -448,7 +442,7 @@ body .body-div .main-info .search-box {
   height: 30px;
   position: fixed;
   right: 150px;
-  top: 27%;
+  top: 195px;
 }
 body .body-div .main-info .search-box input {
   width: 100%;
@@ -459,7 +453,7 @@ body .body-div .main-info select {
   height: 30px;
   position: fixed;
   right: 20px;
-  top: 27%;
+  top: 195px;
 }
 body .body-div .main-info .demo {
   margin-top: 30px;
