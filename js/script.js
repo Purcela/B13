@@ -5,30 +5,7 @@ $("#burger-menu").on("click", function(){
     $("#menu1").toggleClass("open-menu");
   })
 
-// -------------------------  
 
-function myFunction(imgs) {
-  var expandImg = document.getElementById("expandedImg");
-  var imgText = document.getElementById("imgtext");
-  expandImg.src = imgs.src;
-  imgText.innerHTML = imgs.alt;
-  expandImg.parentElement.style.display = "block";
-}
-
-$('img[data-enlargable]').addClass('img-enlargable').click(function(){
-  var src = $(this).attr('src');
-  $('<div>').css({
-      background: 'RGBA(0,0,0,.5) url('+src+') no-repeat center',
-      backgroundSize: 'contain',
-      width:'100%', height:'100%',
-      position:'fixed',
-      zIndex:'10000',
-      top:'0', left:'0',
-      cursor: 'zoom-out'
-  }).click(function(){
-      $(this).remove();
-  }).appendTo('body');
-});
 
 // -----------------------------  sort by ----------------------------
 
@@ -52,22 +29,58 @@ function myFunction() {
 }
 
 // ------------------------------- search ------------------------------
+
 function searchByID() {
-    var input, filter, gallery, productBoxes, idBoxes, i;
+    var input, filter, productBoxes, idBoxes, i;
     input = document.getElementById('searchInput');
-    filter = input.value.toUpperCase();
-    gallery = document.querySelector('.gallery-container');
-    productBoxes = gallery.querySelectorAll('.product-box');
-    idBoxes = gallery.querySelectorAll('.id-box');
+    filter = input.value.trim().toUpperCase();
+    productBoxes = document.querySelectorAll('.product-box');
+    idBoxes = document.querySelectorAll('.id-box'); // Corrected class name
 
     for (i = 0; i < productBoxes.length; i++) {
-        if (idBoxes[i].textContent.toUpperCase().indexOf(filter) > -1) {
-            productBoxes[i].style.display = '';
+        var searchText = idBoxes[i].textContent.trim().toUpperCase();
+        if (searchText.indexOf(filter) > -1) {
+            productBoxes[i].style.display = 'block';
         } else {
             productBoxes[i].style.display = 'none';
         }
     }
 }
+//---------------------------- gallery view --------------------------------
+
+const images = document.querySelectorAll('[data-enlargable]');
+const modal = document.querySelector('.image-modal');
+const modalImg = document.getElementById('zoomed-img');
+const closeBtn = document.querySelector('.close-modal');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+let currentIndex = 0;
+
+images.forEach((image, index) => {
+    image.addEventListener('click', () => {
+        modal.style.display = 'block';
+        modalImg.src = image.src;
+        currentIndex = index;
+    });
+});
+
+closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+});
+
+prevBtn.addEventListener('click', () => {
+    if (currentIndex > 0) {
+        currentIndex--;
+        modalImg.src = images[currentIndex].src;
+    }
+});
+
+nextBtn.addEventListener('click', () => {
+    if (currentIndex < images.length - 1) {
+        currentIndex++;
+        modalImg.src = images[currentIndex].src;
+    }
+});
 
 //--------------------------- share buttons --------------------------------
 function shareOnFacebook() {
