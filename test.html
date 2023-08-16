@@ -24,17 +24,61 @@
     <title>B13</title>
 </head>
 <body>
-<div class="test-box">
-
-  <div class="texting-box">
-    <p class="text"> text: </p>
-    <p> sakartveloqweqweqweqweqweqwe qwe qwe qwe qwe qweqweqweqwe qwe </p>
-  </div>
-  <p class="text"> <span> text: </span> sakartvelo </p>
-  <p class="text"> <span> text: </span> sakartvelo </p>
-</div>
-
-
+  <form id="product-form">
+      <label for="image">Choose an image:</label>
+      <input type="file" id="image" accept="img/*/*">
+      
+      <label for="product-type">Select product type:</label>
+      <select id="product-type">
+          <option value="t-shirts">T-shirts & clothes</option>
+          <option value="coffee-mugs">Coffee Mugs</option>
+          <!-- Add other product type options here -->
+      </select>
+      
+      <label for="category">Select category:</label>
+      <select id="category">
+          <option value="t-shirt">T-shirt</option>
+          <option value="hood">Hood</option>
+          <!-- Add other category options here -->
+      </select>
+      
+      <label for="description">Description (max 30 characters):</label>
+      <input type="text" id="description" maxlength="30">
+      
+      <label for="id">ID (6 characters):</label>
+      <input type="text" id="id" maxlength="6">
+      
+      <button type="button" id="generate">Generate HTML</button>
+  </form>
+  
+  <div id="generated-code"></div>
+  
+  <script>
+      document.getElementById("generate").addEventListener("click", function() {
+          const image = document.getElementById("image").value;
+          const productType = document.getElementById("product-type").value;
+          const category = document.getElementById("category").value;
+          const description = document.getElementById("description").value;
+          const id = document.getElementById("id").value;
+          
+          const folderLocation = "B13/img/" + productType;
+          const imageSrc = `img/${productType}/${category}-${id}.jpg`;
+          
+          const generatedCode = `
+              <div class="product-box" value="${category}">
+                  <img data-enlargable class="product-img clothes-img" src="${imageSrc}" alt="${category}">
+                  <div class="shop-box">
+                      <p class="id-box">${description} <br> ${id} </p>
+                      <a href="https://www.facebook.com/" target="tab">
+                          <button class="order-box"> order now </button>
+                      </a>
+                  </div>
+              </div>
+          `;
+          
+          document.getElementById("generated-code").innerHTML = generatedCode;
+      });
+  </script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="script.js"></script>
 </body>
