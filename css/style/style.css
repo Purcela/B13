@@ -204,10 +204,6 @@ body header .flag-box h5 {
   font-family: "Lobster";
   font-size: 30px;
 }
-body header .flag-box .geo-map {
-  max-width: 250px;
-  max-height: 100%;
-}
 body header .language-box,
 body header .language-box1 {
   height: 100%;
